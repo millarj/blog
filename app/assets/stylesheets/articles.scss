@@ -1,3 +1,13 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.article-title {
+  margin-top: 1.5em;
+}
+
+#show-container {
+  max-width: 75%;
+  margin-top: 2em;
+}

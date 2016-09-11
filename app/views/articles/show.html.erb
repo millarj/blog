@@ -1,20 +1,41 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
- 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
- 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<div class="container" id="show-container">
+  <div class="col-sm-12">
+    <h4 class="row text-xs-center">
+      <%= @article.title %>
+    </h4>
+   
+    <p class="row">
+      <%= @article.text %>
+    </p>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+    <div class="row">
+      <%= link_to 'Home Page', root_path %> |
+      <%= link_to 'Articles', articles_path %> |
+      <%= link_to 'Edit', edit_article_path(@article) %> |
+      <%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+   
+    <div class="card" style="margin-top: 1em">
+      <div class="card-header">
+        <h5>Add a comment:</h5>
+      </div>
+
+      <div class="card-block">
+        <%= render 'comments/form' %>
+      </div>
+    </div>
+   
+    <div class="card"> 
+      <div class="card-header">
+        <h5>Comments</h5>
+      </div>
+      
+      <div class="card-block">
+        <%= render @article.comments %>
+      </div>
+    </div>
+  </div>
+
+</div><!-- close container -->
  
 

@@ -1,3 +1,19 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main-image {
+  background-image: url('/assets/ocean-photo.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  color: white;
+  padding: 30px;
+  padding-left: 150px;
+  
+}
+
+#index-container {
+  max-width: 95%;
+  margin-top: 2em;
+}
